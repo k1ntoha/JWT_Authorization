@@ -1,0 +1,76 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+.form
+	width: 400px
+	height: 600px
+	background: $dark
+	position: relative
+	perspective: 1000px
+
+	.login, .signUp
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		@include flex(center,center)
+		transition: all 1s
+		backface-visibility: hidden
+		box-shadow: 0px 0px 15px 11px rgba(0, 0, 0, 0.3)
+
+
+		.controller, .recover
+			@include flex(center, center, 5px)
+			color: $white
+			font-size: 18px
+			font-weight: 700
+			position: absolute
+			width: 160px
+			height: 40px
+			background: $lightGreen
+			border-radius: 10px
+			cursor: pointer
+			padding: 10px
+			z-index: 1
+
+
+		.recover
+			bottom: -20px
+
+		.controller
+			top: -20px
+
+	.signUp
+		transform: rotateX(180deg)
+
+	form
+		position: relative
+		background: $dark
+		width: 100%
+		height: 100%
+		@include flex(center, center, 0, 30px, column, no-wrap)
+
+		h5
+			color: transparent
+			font-size: 30px
+			background-image: -o-linear-gradient(45deg, #00e0ce, #3b4251)
+			background-image: linear-gradient(45deg, #00e0ce, #3b4251)
+			-webkit-background-clip: text
+			background-clip: text
+
+		.socialMedia
+			img
+				width: 32px
+				height: 32px
+				cursor: pointer
+
+.active
+	.login
+		transform: rotateX(180deg) !important
+	.signUp
+		transform: rotateX(360deg) !important
+
+@media screen and ( max-width: 600px )
+	.form
+		width: 300px
+		height: 550px

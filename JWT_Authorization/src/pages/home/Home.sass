@@ -1,0 +1,20 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+
+h1
+	color: $white
+	margin-bottom: 20px
+
+.users
+	@include flex(flex-start, flex-start, 20px, 20px, column)
+	color: $white
+	font-size: 20px
+	margin-top: 20px
+
+	.item
+		height: 40px
+		width: 260px
+		background: $white
+		color: black
+		@include flex(center, center)
+		border-radius: 10px

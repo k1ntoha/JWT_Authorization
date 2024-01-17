@@ -1,0 +1,42 @@
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
+.loader
+	@include flex(center, center)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	opacity: 0.5
+
+	.circle
+		background: $lightGreen
+		width: 5px
+		height: 100px
+		anumation: rotate 5s linear infinite
+		-webkit-animation: rotate 5s normal linear infinite
+
+@keyframes rotate 
+	0% 
+		-webkit-transform: rotate3d(0, 0, 1, 0deg)
+		transform: rotate3d(0, 0, 1, 0deg)
+  
+	25% 
+		-webkit-transform: rotate3d(0, 0, 1, 90deg)
+		transform: rotate3d(0, 0, 1, 90deg)
+  
+	50% 
+		-webkit-transform: rotate3d(0, 0, 1, 180deg)
+		transform: rotate3d(0, 0, 1, 180deg)
+  	
+	75% 
+		-webkit-transform: rotate3d(0, 0, 1, 270deg)
+		transform: rotate3d(0, 0, 1, 270deg)
+  
+	100% 
+		-webkit-transform: rotate3d(0, 0, 1, 360deg)
+		transform: rotate3d(0, 0, 1, 360deg)
+  
+
+		

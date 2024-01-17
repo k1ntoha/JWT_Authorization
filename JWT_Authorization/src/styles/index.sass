@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap')
+@import './mixins'
+@import './variables'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Montserrat', sans-serif
+
+button
+  cursor: pointer
+
+body
+  width: 100vw
+  height: 100vh
+  background: $dark
+  @include flex(center, center, 0, 0 ,column, no-wrap)

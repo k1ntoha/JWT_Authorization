@@ -1,0 +1,63 @@
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
+.field
+	position: relative
+	@include flex(flex-start, flex-start, 0, 0, column, no-wrap)
+
+	.error
+		margin-top: 10px
+		color: $red
+
+	.placeholder
+		position: absolute
+		top: 0
+		left: 10px
+		color: $dark
+		z-index: 200
+		font-size: 17px
+		line-height: 40px
+		pointer-events: none
+		transition: 0.2s ease-out
+
+	.notEmptyPlaceholder
+		color: transparent
+
+	.icon
+		position: absolute
+		top: 10px
+		right: 5px
+
+	input
+		padding-top: 10px
+		height: 40px
+		width: 220px
+		font-size: 17px
+		color: $dark
+		position: relative
+		outline: none
+		border-radius: 10px
+		background: $white
+		padding-left: 10px
+		transition: all 0.2s ease-out
+		padding-right: 35px
+
+		&:focus
+			border: 1px solid $white
+			padding-top: 10px
+
+		&:focus ~ .placeholder
+			transform: translateY(-50%)
+			background: $white
+			color: $dark
+			border: 1px solid $white
+			border-radius: 30px
+			padding: 0px 10px
+			line-height: 20px
+			z-index: 200
+
+	.notEmptyInput
+		padding-top: 0
+
+
+
